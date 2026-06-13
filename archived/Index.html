@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attendance Impact Analyzer</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <header>
+      <!--    
+    <div class="hub">
+      <span contenteditable="true">Leave</span>
+      <span contenteditable="true">Mate</span>
+    </div>
+       -->
+      <h1>Leave Mate</h1>
+    </header>
+    <main>
+      <div id="input-section">
+        <div id="current-attendance-section">
+          <h3>Current Attendance:</h3>
+          <div class="subject-grid">
+            <!-- Chemistry -->
+            <div class="subject-input">
+              <h4>Chemistry (Theory + Lab) (GXCYT122):</h4>
+              <div class="attendance-input">
+                <div class="radio-group">
+                  <label>
+                    <input
+                      type="radio"
+                      name="chem-attendance-type"
+                      value="percentage"
+                      checked
+                    />
+                    Percentage
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="chem-attendance-type"
+                      value="classes"
+                    />
+                    Classes
+                  </label>
+                </div>
+                <input
+                  type="number"
+                  id="chem-current-attendance"
+                  min="0"
+                  step="0.01"
+                  placeholder="Enter value"
+                />
+              </div>
+            </div>
+
+            <!-- Mathematics -->
+            <div class="subject-input">
+              <h4>Mathematics (GMAT201):</h4>
+              <div class="attendance-input">
+                <div class="radio-group">
+                  <label>
+                    <input
+                      type="radio"
+                      name="maths-attendance-type"
+                      value="percentage"
+                      checked
+                    />
+                    Percentage
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="maths-attendance-type"
+                      value="classes"
+                    />
+                    Classes
+                  </label>
+                </div>
+                <input
+                  type="number"
+                  id="maths-current-attendance"
+                  min="0"
+                  step="0.01"
+                  placeholder="Enter value"
+                />
+              </div>
+            </div>
+
+            <!-- IPR -->
+            <div class="subject-input">
+              <h4>IPR (UCEST206):</h4>
+              <div class="attendance-input">
+                <div class="radio-group">
+                  <label>
+                    <input
+                      type="radio"
+                      name="ipr-attendance-type"
+                      value="classes"
+                    />
+                    Classes
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="ipr-attendance-type"
+                      value="percentage"
+                      checked
+                    />
+                    Percentage
+                  </label>
+                </div>
+                <input
+                  type="number"
+                  id="ipr-current-attendance"
+                  min="0"
+                  step="0.01"
+                  placeholder="Enter value"
+                />
+              </div>
+            </div>
+
+            <!-- FCH -->
+            <div class="subject-input">
+              <h4>FCH</h4>
+              <div class="attendance-input">
+                <div class="radio-group">
+                  <label>
+                    <input
+                      type="radio"
+                      name="fch-attendance-type"
+                      value="percentage"
+                      checked
+                    />
+                    Percentage
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="fch-attendance-type"
+                      value="classes"
+                    />
+                    Classes
+                  </label>
+                </div>
+                <input
+                  type="number"
+                  id="fch-current-attendance"
+                  min="0"
+                  step="0.01"
+                  placeholder="Enter value"
+                />
+              </div>
+            </div>
+
+            <!-- Discrete Mathematics -->
+            <div class="subject-input">
+              <h4>Discrete Mathematics</h4>
+              <div class="attendance-input">
+                <div class="radio-group">
+                  <label>
+                    <input
+                      type="radio"
+                      name="dm-attendance-type"
+                      value="classes"
+                      checked
+                    />
+                    Classes
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="dm-attendance-type"
+                      value="percentage"
+                    />
+                    Percentage
+                  </label>
+                </div>
+                <input
+                  type="number"
+                  id="dm-current-attendance"
+                  min="0"
+                  step="0.01"
+                  placeholder="Enter value"
+                />
+              </div>
+            </div>
+
+            <!-- C Programming -->
+            <div class="subject-input">
+              <h4>C Programming</h4>
+              <div class="attendance-input">
+                <div class="radio-group">
+                  <label>
+                    <input
+                      type="radio"
+                      name="c-attendance-type"
+                      value="percentage"
+                      checked
+                    />
+                    Percentage
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="c-attendance-type"
+                      value="classes"
+                    />
+                    Classes
+                  </label>
+                </div>
+                <input
+                  type="number"
+                  id="c-current-attendance"
+                  min="0"
+                  step="0.01"
+                  placeholder="Enter value"
+                />
+              </div>
+            </div>
+
+            <!-- IT Workshop -->
+            <div class="subject-input">
+              <h4>IT Workshop</h4>
+              <div class="attendance-input">
+                <div class="radio-group">
+                  <label>
+                    <input
+                      type="radio"
+                      name="itw-attendance-type"
+                      value="percentage"
+                      checked
+                    />
+                    Percentage
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="itw-attendance-type"
+                      value="classes"
+                    />
+                    Classes
+                  </label>
+                </div>
+                <input
+                  type="number"
+                  id="itw-current-attendance"
+                  min="0"
+                  step="0.01"
+                  placeholder="Enter value"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="subjects-section">
+          <h3>Current Taken Total Classes:</h3>
+          <div class="subject-grid">
+            <div class="subject-input">
+              <label for="chem-total"
+                >Chemistry (Theory + Lab) (GXCYT122):</label
+              >
+              <input
+                type="number"
+                id="chem-total"
+                min="1"
+                placeholder="Enter Value"
+              />
+            </div>
+            <div class="subject-input">
+              <label for="maths-total">Mathematics (GMAT201):</label>
+              <input
+                type="number"
+                id="maths-total"
+                min="1"
+                placeholder="Enter Value"
+              />
+            </div>
+            <div class="subject-input">
+              <label for="ipr-total">IPR (UCEST206):</label>
+              <input
+                type="number"
+                id="ipr-total"
+                min="1"
+                placeholder="Enter Value"
+              />
+            </div>
+            <div class="subject-input">
+              <label for="fch-total">FCH (GXEST203):</label>
+              <input
+                type="number"
+                id="fch-total"
+                min="1"
+                placeholder="Enter Value "
+              />
+            </div>
+            <div class="subject-input">
+              <label for="dm-total">Discrete Mathematics (PCITT205):</label>
+              <input
+                type="number"
+                id="dm-total"
+                min="1"
+                placeholder="Enter value"
+              />
+            </div>
+            <div class="subject-input">
+              <label for="c-total">C (Theory + Lab) (GXEST204):</label>
+              <input
+                type="number"
+                id="c-total"
+                min="1"
+                placeholder="Enter value"
+              />
+            </div>
+            <div class="subject-input">
+              <label for="itw-total">IT Workshop (GXEST208):</label>
+              <input
+                type="number"
+                id="itw-total"
+                min="1"
+                placeholder="Enter Value"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div id="subjects-section">
+          <h3>Approxiamte Total classes:</h3>
+          <div class="subject-grid">
+            <div class="subject-input">
+              <label for="chem-entire-total"
+                >Chemistry (Theory + Lab) (GXCYT122):</label
+              >
+              <input
+                type="number"
+                id="chem-total"
+                min="1"
+                placeholder="Enter Value"
+              />
+            </div>
+            <div class="subject-input">
+              <label for="maths-entire-total">Mathematics (GMAT201):</label>
+              <input
+                type="number"
+                id="maths-total"
+                min="1"
+                placeholder="Enter Value"
+              />
+            </div>
+            <div class="subject-input">
+              <label for="ipr-entire-total">IPR (UCEST206):</label>
+              <input
+                type="number"
+                id="ipr-total"
+                min="1"
+                placeholder="Enter Value"
+              />
+            </div>
+            <div class="subject-input">
+              <label for="fch-entire-total">FCH (GXEST203):</label>
+              <input
+                type="number"
+                id="fch-total"
+                min="1"
+                placeholder="Enter Value "
+              />
+            </div>
+            <div class="subject-input">
+              <label for="dm-entire-total"
+                >Discrete Mathematics (PCITT205):</label
+              >
+              <input
+                type="number"
+                id="dm-total"
+                min="1"
+                placeholder="Enter value"
+              />
+            </div>
+            <div class="subject-input">
+              <label for="c-entire-total">C (Theory + Lab) (GXEST204):</label>
+              <input
+                type="number"
+                id="c-total"
+                min="1"
+                placeholder="Enter value"
+              />
+            </div>
+            <div class="subject-input">
+              <label for="itw-entire-total">IT Workshop (GXEST208):</label>
+              <input
+                type="number"
+                id="itw-total"
+                min="1"
+                placeholder="Enter Value"
+              />
+            </div>
+          </div>
+        </div>
+
+        <h3>Add Absent Dates:</h3>
+        <div class="date-input-container">
+          <div class="date-input-row">
+            <input type="date" id="datePicker" />
+            <select id="subject-select">
+              <option value="chem">Chemistry</option>
+              <option value="maths">Mathematics</option>
+              <option value="ipr">IPR</option>
+              <option value="fch">FCH</option>
+              <option value="dm">Discrete Mathematics</option>
+              <option value="c">C Programming</option>
+              <option value="itw">IT Workshop</option>
+              <option value="fullday">Entire Day</option>
+            </select>
+          </div>
+          <button onclick="addDate()">Add Absent Date</button>
+        </div>
+
+        <h3>Absent Dates:</h3>
+        <ul id="date-list"></ul>
+        <button onclick="calculateAttendance()" class="calculate-btn">
+          Calculate Attendance
+        </button>
+      </div>
+      <div id="result-section">
+        <h2>Results:</h2>
+        <div id="subject-results"></div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
